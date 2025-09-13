@@ -26,16 +26,33 @@ I created derived features (DTI ratio, income brackets, credit tiers) and used S
 
 ---
 
-## 📊 Example Queries  
+📑 Insights
 
-**1. Average DTI by Income Bracket**  
-```sql
-SELECT 
-    income_brackets,
-    ROUND(AVG(dti_ratio), 3) AS avg_dti,
-    ROUND(MIN(dti_ratio), 3) AS min_dti,
-    ROUND(MAX(dti_ratio), 3) AS max_dti
-FROM loan_defaults
-GROUP BY income_brackets
-ORDER BY avg_dti DESC;
+High DTI ratios are concentrated in lower-income brackets and weaker credit tiers.
+
+Default rates are higher in low-income groups and weak credit tiers.
+
+Some loans issued below policy thresholds, revealing inconsistencies.
+
+Loan purpose and size vary significantly by income level, influencing repayment behavior.
+
+🚀 Next Steps
+
+Expand analysis with visualizations (Power BI / Tableau).
+
+Add Part 2 with advanced queries (joins, window functions, trend analysis).
+
+Explore predictive modeling on top of the SQL outputs.
+
+📂 Structure
+
+queries/ → SQL scripts for each question
+
+presentation/ → PPT slides with summarized insights
+
+README.md → Project overview (this file)
+
+✨ Author
+
+Created by Paulette Kihuha – Aspiring Data Analyst with a focus on credit risk and financial data analysis.
 
